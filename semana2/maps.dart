@@ -5,7 +5,6 @@ void main(){
   var repetir="si";
   while (repetir=="si"){
     stdout.writeln("Menú\n1:Mostrar todos los datos.\n2:Insertar un nuevo registro.\n3:Modificar un registro.\n4:Borrar un registro.\nElige la opcion con el numero correspindiente: ");
-
     var opcion = stdin.readLineSync();
     if (opcion =="1"){
       mostrar();
@@ -23,7 +22,6 @@ void main(){
     repetir = stdin.readLineSync();
   }
 }
-
 void insertar(){
   stdout.writeln("Peronas a ingresar: ");
   var veces = stdin.readLineSync();
@@ -44,12 +42,10 @@ void insertar(){
     };
     guardar.add(agendadatos);
   }
-
 }
 void mostrar(){
   print(guardar);
 }
-
 void modificar(){
   mostrar();
   stdout.writeln("Ingresa el nombre de la persona que se quiere modificar: ");
@@ -72,10 +68,8 @@ void modificar(){
       print("El nombre de la persona $cambio se ha modoficado: ");
       print(guardar);
     }
-
   }
 }
-
 void eliminar(){
   mostrar();
   print("Ingresa el nombre de la persona a eliminar: ");
@@ -83,13 +77,10 @@ void eliminar(){
   for (int i=0; i < guardar.length; i++){
     var eliminacion = new Map();
     eliminacion = guardar[i];
-
     if (nombreeli == eliminacion['Nombre']){
     guardar.removeAt(i);
     print("La persona $nombreeli se ha eliminado ");
     print (guardar);
-    }
-    
+    } 
   } 
-
 }
