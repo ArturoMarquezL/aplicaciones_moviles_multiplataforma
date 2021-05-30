@@ -53,7 +53,6 @@ void modificar(){
   for(int i=0; i < guardar.length; i++){
       var modificacion = new Map();
       modificacion = guardar[i];
-
     if (cambio ==modificacion['Nombre']){
       stdout.writeln("Ingresa el nombre de la persona: ");
       var nombremod = stdin.readLineSync();
